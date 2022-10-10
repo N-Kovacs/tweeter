@@ -1,0 +1,29 @@
+/*
+ * Nav layout stuff
+ */
+
+ nav {
+  flex: 1;
+  top: 0px;
+  height: 120px;
+  width: 100%;
+  background: #4056A1;
+  display: flex;
+  color: #FFFFFF;
+  font: 45px "Bungee";
+  padding-left: 1.5em;
+  padding-top: 1em;
+  justify-content: space-between;
+  position: fixed;
+ }
+
+ .rightnav {
+  display: flex;
+  padding-right: 1.5em;
+  text-align: right;
+  font: 30px "Source Sans Pro";
+  flex-direction: column;
+ }
+ .arrow {
+  padding-right: 4em;
+ }
