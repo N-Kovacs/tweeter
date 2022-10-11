@@ -3,9 +3,11 @@ h2{
   text-align: left;
 }
 .new-tweet{
+  margin-left:2.5%;
   width: 95%;
-  display:flex;
-  justify-content: center;
+  display: inline-flex;
+
+
   flex-direction: column;
   text-align: center;
   color: black;
