@@ -1,0 +1,47 @@
+h2{
+  font: 30px "Source Sans Pro";
+  text-align: left;
+}
+.new-tweet{
+  width: 95%;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+}
+
+.tweet-button{
+  color:white;
+  background-color: darkblue;
+}
+.entry{
+  font: 25px "Source Sans Pro";
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.textbox{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 4px;
+  background-color:transparent;
+  resize:none;
+  
+}
+.below{
+  height: 100px;
+  font: 25px "Bungee";
+  display:flex;
+  justify-content: space-between;
+  align-items: center
+
+}
+.negative{
+  color: red;
+}
+
+

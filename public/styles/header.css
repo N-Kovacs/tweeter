@@ -1,5 +1,5 @@
 body {
-  display:flex;
+  display:flexbox;
   margin-top: 150px;
   height: 550px;
   width: 100%;
