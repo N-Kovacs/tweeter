@@ -1,0 +1,11 @@
+#error{
+  display:inline-flex;
+  color:red;
+  background-color: pink;
+  border-style:solid;
+  width:95%;
+  align-self: center;
+  justify-content:space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+}
