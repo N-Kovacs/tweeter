@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
   <!-- App CSS -->
   <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
@@ -26,11 +27,11 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script src="scripts/composer-char-counter.js"></script> 
-
 </head>
 
 <body>
@@ -54,11 +55,14 @@
       <span><b>Nicholas</b> Kovacs</span>
     </div>
   </header>
+  <script>
+
+  </script>
 
   <main class="container">
     <section class="new-tweet">
       <h2>Compose Tweet</h2>
-      <form action="/tweets" method="POST" class="entry">
+      <form action="" class="entry">
         <textarea class = "textbox" name="text" id="tweet-text" placeholder="What are you humming about?""></textarea>
         <div class = "below">
           <button class="tweet-button"  type="submit">Tweet</button>
@@ -66,28 +70,16 @@
         </div>
       </form>
     </section>
-    <section class="tweets">
-      <section class = "tweet">
-        <header class>
-          <div> PP</div>
-          <div>Newton</div>
-          <div class= "handle">@SirIsaac</div>
-        </header>
-        <article>
-          If I have seen, have eyes
-        </article>
-        <footer>
-          <div>10 days ago</div>
-          <div class="tweet-buttons"> 
-            <div><i class="fa-solid fa-flag"></i></div>
-            <div><i class="fa-solid fa-retweet"></i></div>
-            <div><i class="fa-solid fa-heart"></i></div>
-          </div>
-        </footer>
-      </section>
+    <section id="tweets">
     </section>
     
   </main>
+
+  <script>
+    $( "submit" ).click(function( event ) {
+      event.preventDefault();
+    });
+  </script>
 </body>
 
 </html>
