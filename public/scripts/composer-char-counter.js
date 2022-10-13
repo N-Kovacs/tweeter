@@ -11,4 +11,8 @@ $(document).ready(function() {
     }
     
   });
+  $("form").on("submit", function(event) {
+    $(this).children('.below').children('.counter').text("140");
+  });
+  
 });
