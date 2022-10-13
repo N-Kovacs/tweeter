@@ -4,6 +4,7 @@ Tweeter is a simple, single-page Twitter clone.
 
 This repository is the finished lighthouse labs project by Nicholas Kovacs.
 
+## Screenshots
 !["Screenshot of desktop layout"](https://github.com/N-Kovacs/tweeter/blob/master/docs/tweeter-desktopview.png?raw=true)
 !["Screenshot of mobile layout"](https://github.com/N-Kovacs/tweeter/blob/master/docs/tweeter-mobileview.png?raw=true)
 
