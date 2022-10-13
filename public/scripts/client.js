@@ -5,7 +5,7 @@
  */
 
 //escape function to sanitize inputs
-const escapeFunc = function (str) {
+const escapeFunc = function(str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
@@ -13,7 +13,7 @@ const escapeFunc = function (str) {
 
 
 //returns tweet element from tweet object
-const createTweetElement = function (tweetObject) {
+const createTweetElement = function(tweetObject) {
   const markup = `
 <section class = "tweet">
 <header class>
@@ -40,7 +40,7 @@ ${escapeFunc(tweetObject.content.text)}
 };
 
 //returns error markup to be displayed on error, when given an error
-const errorMarkup = function (errorReason) {
+const errorMarkup = function(errorReason) {
   $('#error').empty();
   const markup = `
   <header>
@@ -59,7 +59,7 @@ const errorMarkup = function (errorReason) {
 
 
 //renders tweets using createTweetelement data
-const renderTweets = function (tweets) {
+const renderTweets = function(tweets) {
   $('#tweets').empty();
   for (const tweetData of tweets) {
     let $tweet = createTweetElement(tweetData);
@@ -69,13 +69,13 @@ const renderTweets = function (tweets) {
 };
 
 //webpage ajax and display
-$(document).ready(function () {
+$(document).ready(function() {
   $("#error").slideUp(0);
   //display tweets
   $.ajax('/tweets', { method: 'GET' })
     .then((res) => renderTweets(res));
   //check for errors, if found display, if not, post serialized to /tweets
-  $("form").on("submit", function (event) {
+  $("form").on("submit", function(event) {
     event.preventDefault();
     const textbox = document.querySelector('.textbox');
     if (textbox.value === "" || textbox.value === null) {
