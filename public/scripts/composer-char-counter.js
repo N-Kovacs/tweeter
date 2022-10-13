@@ -1,8 +1,4 @@
-const composerCharCounter = function(){
-
-}
-
-
+//code for character counter, also turns text red if negative
 $(document).ready(function() {
   const textbox = document.querySelector('.textbox');
   $(textbox).on('input', function() {
@@ -14,13 +10,5 @@ $(document).ready(function() {
 
     }
     
-
-    
   });
 });
-
-
-
-
-
-//module.exports = {composerCharCounter};

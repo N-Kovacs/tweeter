@@ -2,8 +2,6 @@
   display: inline-flex;
   flex-direction:column-reverse;
   align-items:center;
-
-
 }
 
 .tweet {
@@ -65,10 +63,10 @@
   width:2em;
 }
 
-
 .tweet-buttons div:hover{
   color:yellow;
 }
+
 .handle{
   color:grey;
   display: flex;

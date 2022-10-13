@@ -3,6 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+//escape function to sanitize inputs
 const escapeFunc = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -10,6 +12,7 @@ const escapeFunc = function (str) {
 };
 
 
+//returns tweet element from tweet object
 const createTweetElement = function (tweetObject) {
   const markup = `
 <section class = "tweet">
@@ -36,7 +39,8 @@ ${escapeFunc(tweetObject.content.text)}
 
 };
 
-const errorMarkup = function(errorReason){
+//returns error markup to be displayed on error, when given an error
+const errorMarkup = function (errorReason) {
   $('#error').empty();
   const markup = `
   <header>
@@ -50,13 +54,12 @@ const errorMarkup = function(errorReason){
 </section>
 
 `;
-return markup;
-}
+  return markup;
+};
 
+
+//renders tweets using createTweetelement data
 const renderTweets = function (tweets) {
-  // loops through tweets
-  // calls createTweetElement for each tweet
-  // takes return value and appends it to the tweets container
   $('#tweets').empty();
   for (const tweetData of tweets) {
     let $tweet = createTweetElement(tweetData);
@@ -65,26 +68,23 @@ const renderTweets = function (tweets) {
 
 };
 
-// Test / driver code (temporary). Eventually will get this from the server.
-
-
-
+//webpage ajax and display
 $(document).ready(function () {
   $("#error").slideUp(0);
-
+  //display tweets
   $.ajax('/tweets', { method: 'GET' })
     .then((res) => renderTweets(res));
-
+  //check for errors, if found display, if not, post serialized to /tweets
   $("form").on("submit", function (event) {
     event.preventDefault();
     const textbox = document.querySelector('.textbox');
     if (textbox.value === "" || textbox.value === null) {
-      let $error = errorMarkup("No/Null Tweet Entry")
-      $('#error').append($error)
+      let $error = errorMarkup("No/Null Tweet Entry");
+      $('#error').append($error);
       $("#error").slideDown(1000);
     } else if (textbox.value.length > 140) {
-      let $error = errorMarkup("Tweets cannot exceed 140 characters")
-      $('#error').append($error)
+      let $error = errorMarkup("Tweets cannot exceed 140 characters");
+      $('#error').append($error);
       $("#error").slideDown(1000);
       textbox.value = "";
     } else {
@@ -96,10 +96,7 @@ $(document).ready(function () {
         data: $(this).serialize()
       }).then((res) => $.ajax('/tweets', { method: 'GET' }))
         .then((res) => renderTweets(res));
-
-
     }
-
   });
 });
 

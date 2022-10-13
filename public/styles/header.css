@@ -1,7 +1,6 @@
 .profile {
   display:flex;
   flex-direction:column;
-  height:fit-content;
 
   margin-top: 120px;
   color: #FFFFFF;
@@ -17,6 +16,5 @@
     width: 33.3%;
     float: left;
     margin-top: 300px;
-    height:fit-content;
   }
 }
