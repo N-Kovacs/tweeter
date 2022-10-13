@@ -1,13 +1,22 @@
-body {
-  margin-top: 150px;
-  height: 550px;
-  width: 100%;
-  justify-content: center;
+.profile {
+  display:flex;
+  flex-direction:column;
+  height:fit-content;
 
-  text-align: center;
+  margin-top: 120px;
   color: #FFFFFF;
   font: 40px "Source Sans Pro";
   background-color: #d47f00;
   background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+ 
+} 
+
+@media only screen and (min-width: 1024px) {
+  .profile {
+    width: 33.3%;
+    float: left;
+    margin-top: 300px;
+    height:fit-content;
+  }
 }

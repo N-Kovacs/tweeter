@@ -46,21 +46,27 @@
 }
 
 .tweet footer{
+  width:95%;
   display:flex;
   font: 20px "Source Sans Pro";
   color:black;
-  margin-left:2%;
-  margin-right: 2%;
-
   justify-content: space-between;
+  align-self:center;
+  margin-bottom:15px;
+
 }
 
 .tweet-buttons{
   display:flex;
   color:blue;
 }
+
+.tweet-buttons div{
+  width:2em;
+}
+
+
 .tweet-buttons div:hover{
-  display:flex;
   color:yellow;
 }
 .handle{

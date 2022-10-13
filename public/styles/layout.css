@@ -16,8 +16,9 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
   font: 24px "Source Sans Pro", sans-serif;
+  text-align: center;
+
   
 }
 
@@ -26,10 +27,33 @@ body {
  */
 
  main {
-  width: 90%;
+  width: 100%;
   display:inline-flex;
   text-align: center;
   justify-content: center;
   flex-direction: column;
   background-color: #f4f1ec;
  }
+
+ @media only screen and (min-width: 1024px) {
+  .profile {
+    width: 33.3%;
+    float: left;
+    background-color: #d47f00;
+    background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
+  }
+  
+  .container {
+    width: 66.7%;
+    float: right
+  }
+  
+  .new-tweet{
+    margin-top:130px;
+  }
+  body {
+    background-color: #f4f1ec;
+  }
+
+ 
+}
