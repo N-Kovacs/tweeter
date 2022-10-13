@@ -95,7 +95,9 @@ $(document).ready(function () {
         url: '/tweets',
         data: $(this).serialize()
       }).then((res) => $.ajax('/tweets', { method: 'GET' }))
-        .then((res) => renderTweets(res));
+        .then((res) => renderTweets(res))
+        .then((res) => textbox.value = "")
+        .catch((err) => console.log(err));
     }
   });
 });
