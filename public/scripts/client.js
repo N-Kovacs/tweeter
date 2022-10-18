@@ -86,7 +86,6 @@ $(document).ready(function() {
       let $error = errorMarkup("Tweets cannot exceed 140 characters");
       $('#error').append($error);
       $("#error").slideDown(1000);
-      textbox.value = "";
     } else {
       $("#error").slideUp(1000);
       $('#error').empty();
@@ -97,6 +96,7 @@ $(document).ready(function() {
       }).then((res) => $.ajax('/tweets', { method: 'GET' }))
         .then((res) => renderTweets(res))
         .then((res) => textbox.value = "")
+        .then((res) => $('.counter').text("140"))
         .catch((err) => console.log(err));
     }
   });
